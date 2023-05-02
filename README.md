@@ -22,3 +22,9 @@ CTRL+Shift+P - `Wokwi - Start Simulation`
 - build: `idf.py build`
 - merge binary into single file: `cd build; esptool.py --chip esp32 merge_bin -o EmbeddedWizard-ESP-WROVER-KIT-merged.bin "@flash_args"`
 - open VS Code - Run Wokwi simulation
+
+## Flashing to real HW
+
+```
+esptool.py --chip esp32 -p COM10 -b 926100 write_flash 0x0 build/EmbeddedWizard-ESP-WROVER-KIT-merged.bin
+```
