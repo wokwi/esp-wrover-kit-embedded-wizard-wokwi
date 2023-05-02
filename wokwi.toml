@@ -1,5 +1,5 @@
 
 [wokwi]
 version = 1
-elf = "build/merged-flash.bin"
-firmware = "build/merged-flash.bin"
+elf = "build/EmbeddedWizard-ESP-WROVER-KIT-merged.bin"
+firmware = "build/EmbeddedWizard-ESP-WROVER-KIT-merged.bin"
