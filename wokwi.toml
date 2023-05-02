@@ -1,0 +1,5 @@
+
+[wokwi]
+version = 1
+elf = "build/merged-flash.bin"
+firmware = "build/merged-flash.bin"
