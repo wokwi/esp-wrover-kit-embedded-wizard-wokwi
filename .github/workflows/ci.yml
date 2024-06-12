@@ -8,7 +8,7 @@ jobs:
   simulate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Download prebuilt firmware
         run: |
@@ -30,7 +30,7 @@ jobs:
           WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
 
       - name: Publish screen shot as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: screenshot
           path: public/screenshot.png
@@ -40,7 +40,7 @@ jobs:
           echo "<html><body><img src='screenshot.png'></body></html>" > public/index.html
 
       - name: Upload screen shot to GitHub pages
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'public'
 
@@ -62,7 +62,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
 
       - name: Display screen shot in action summary
         run: |
